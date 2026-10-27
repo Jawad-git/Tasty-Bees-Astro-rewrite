@@ -1,0 +1,61 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { url } from '../lib/url';
+
+const page = await getEntry('pages', 'about');
+if (!page) throw new Error('Missing src/content/pages/about.md');
+const { Content } = await render(page);
+const { data } = page;
+---
+
+<BaseLayout title={data.title} description={data.description} image={data.heroImage} imageAlt={data.heroImageAlt}>
+  <PageHeader eyebrow="About" heading={data.heading} intro={data.intro} />
+  <section class="section">
+    <div class="container about-grid">
+      <div class="prose">
+        <Content />
+      </div>
+      {
+        data.heroImage && (
+          <figure class="about-media">
+            <img src={url(data.heroImage)} alt={data.heroImageAlt ?? ''} width="1000" height="1000" loading="lazy" decoding="async" />
+          </figure>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  @media (min-width: 56rem) {
+    .about-grid {
+      grid-template-columns: 1.3fr 1fr;
+    }
+
+    .about-media {
+      position: sticky;
+      top: calc(var(--header-height) + var(--space-5));
+    }
+  }
+
+  .about-media {
+    margin: 0;
+  }
+
+  .about-media img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    background: #fff;
+    box-shadow: var(--shadow-md);
+  }
+</style>

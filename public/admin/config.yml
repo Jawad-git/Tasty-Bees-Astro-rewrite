@@ -1,0 +1,260 @@
+# Decap CMS configuration. Docs: https://decapcms.org/docs/configuration-options/
+#
+# Every collection below writes to the exact files the Astro site reads:
+#   src/content/pages/*.md  -> page text (Markdown + frontmatter)
+#   src/data/*.json         -> menu, hours, contact details, links (JSON)
+# Saving in the CMS commits to the branch below, which triggers the
+# GitHub Pages workflow (.github/workflows/deploy.yml) to rebuild the site.
+
+backend:
+  name: github
+  repo: Jawad-git/Tasty-Bees-Astro-rewrite # REPLACE if the repository moves: owner/name
+  branch: main
+  # GitHub sign-in needs an OAuth proxy because GitHub Pages cannot run one.
+  # After deploying one (see README "CMS authentication"), uncomment and set:
+  # base_url: https://YOUR-OAUTH-PROXY.example.workers.dev
+  # auth_endpoint: auth
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+
+# Local editing without sign-in: run `npm run cms` next to `npm run dev`,
+# then open http://localhost:4321/admin/. Ignored on the live site.
+local_backend: true
+
+# The editorial workflow (drafts reviewed as pull requests) works with the
+# GitHub backend but is off to keep publishing one click. To enable:
+# publish_mode: editorial_workflow
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+site_url: https://jawad-git.github.io/Tasty-Bees-Astro-rewrite/ # REPLACE with your live URL or custom domain
+logo_url: ../images/site/logo.svg
+
+collections:
+  # ---------------------------------------------------------------- Pages
+  - name: pages
+    label: Pages
+    description: Text and images for the Home, About and Contact pages.
+    editor: { preview: false }
+    files:
+      - name: home
+        label: Home page
+        file: src/content/pages/home.md
+        fields:
+          - { name: title, label: 'Browser tab / search title', widget: string, hint: 'Under 70 characters.' }
+          - { name: description, label: 'Search description', widget: text, hint: '50 to 170 characters, shown in Google results.' }
+          - { name: heading, label: 'Main heading', widget: string }
+          - { name: intro, label: 'Intro text under the heading', widget: text, required: false }
+          - { name: heroImage, label: 'Hero image', widget: image, required: false, choose_url: false }
+          - { name: heroImageAlt, label: 'Hero image description (for screen readers)', widget: string, required: false }
+          - name: primaryCta
+            label: Main button
+            widget: object
+            required: false
+            fields:
+              - { name: label, label: 'Button text', widget: string }
+              - { name: href, label: 'Link (e.g. /menu/)', widget: string }
+          - name: secondaryCta
+            label: Second button
+            widget: object
+            required: false
+            fields:
+              - { name: label, label: 'Button text', widget: string }
+              - { name: href, label: 'Link (e.g. /contact/)', widget: string }
+          - { name: body, label: 'Introduction section', widget: markdown, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [image] }
+      - name: about
+        label: About page
+        file: src/content/pages/about.md
+        fields:
+          - { name: title, label: 'Browser tab / search title', widget: string }
+          - { name: description, label: 'Search description', widget: text, hint: '50 to 170 characters.' }
+          - { name: heading, label: 'Main heading', widget: string }
+          - { name: intro, label: 'Intro text', widget: text, required: false }
+          - { name: heroImage, label: 'Side image', widget: image, required: false, choose_url: false }
+          - { name: heroImageAlt, label: 'Image description (for screen readers)', widget: string, required: false }
+          - { name: body, label: 'Page text', widget: markdown, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [image] }
+      - name: contact
+        label: Contact page
+        file: src/content/pages/contact.md
+        fields:
+          - { name: title, label: 'Browser tab / search title', widget: string }
+          - { name: description, label: 'Search description', widget: text, hint: '50 to 170 characters.' }
+          - { name: heading, label: 'Main heading', widget: string }
+          - { name: intro, label: 'Intro text', widget: text, required: false }
+          - { name: body, label: 'Text above the contact form', widget: markdown, buttons: [bold, italic, link, bulleted-list], editor_components: [] }
+
+  # ----------------------------------------------------------------- Menu
+  - name: menu
+    label: Menu
+    description: Categories, items and prices. Drag categories and items to reorder them on the site.
+    format: json
+    editor: { preview: false }
+    files:
+      - name: menu
+        label: Menu
+        file: src/data/menu.json
+        fields:
+          - name: currency
+            label: Currency
+            widget: object
+            collapsed: true
+            fields:
+              - { name: code, label: 'Currency code (USD, LBP, EUR...)', widget: string, pattern: ['^[A-Z]{3}$', 'Use a 3-letter code such as USD'] }
+              - { name: locale, label: 'Number format locale', widget: string, default: en-US, hint: 'en-US shows $7.00; ar-LB shows Arabic digits.' }
+          - name: categories
+            label: Categories
+            label_singular: Category
+            widget: list
+            collapsed: true
+            summary: '{{fields.name}}'
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: id, label: 'ID (used in links, lowercase-with-dashes)', widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and dashes only'] }
+              - { name: description, label: Description, widget: text, required: false }
+              - { name: image, label: Image, widget: image, required: false, choose_url: false }
+              - { name: available, label: 'Show this category', widget: boolean, default: true }
+              - name: items
+                label: Items
+                label_singular: Item
+                widget: list
+                collapsed: true
+                summary: '{{fields.name}}'
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: id, label: 'ID (unique, lowercase-with-dashes)', widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and dashes only'] }
+                  - { name: secondaryName, label: 'Arabic name', widget: string, required: false }
+                  - { name: description, label: Description, widget: text, required: false }
+                  - name: prices
+                    label: Prices
+                    label_singular: Price
+                    widget: list
+                    summary: '{{fields.label}} {{fields.amount}}'
+                    min: 1
+                    fields:
+                      - { name: label, label: 'Size label (leave empty for a single price)', widget: string, required: false }
+                      - { name: amount, label: Price, widget: number, value_type: float, min: 0, step: 0.25 }
+                  - { name: image, label: Photo, widget: image, required: false, choose_url: false }
+                  - { name: available, label: 'Available today', widget: boolean, default: true }
+                  - { name: featured, label: 'Feature on the homepage', widget: boolean, default: false }
+                  - { name: dietary, label: 'Dietary labels', widget: list, required: false, hint: 'e.g. Vegan, Vegetarian, Gluten-free', field: { name: label, label: Label, widget: string } }
+                  - { name: allergens, label: Allergens, widget: list, required: false, hint: 'e.g. Milk, Nuts, Gluten, Eggs', field: { name: allergen, label: Allergen, widget: string } }
+                  - { name: note, label: 'Short note (e.g. Takeaway only)', widget: string, required: false }
+
+  # ------------------------------------------------------------- Settings
+  - name: settings
+    label: Café settings
+    description: Contact details, opening hours, navigation and social links.
+    format: json
+    editor: { preview: false }
+    files:
+      - name: site
+        label: Café details and SEO
+        file: src/data/site.json
+        fields:
+          - { name: name, label: 'Café name', widget: string }
+          - { name: tagline, label: Tagline, widget: string }
+          - { name: logo, label: Logo, widget: image, choose_url: false }
+          - { name: logoAlt, label: 'Logo description', widget: string }
+          - name: contact
+            label: Contact details
+            widget: object
+            fields:
+              - { name: phone, label: Phone, widget: string, required: false }
+              - { name: phoneLabel, label: 'Phone label', widget: string, default: Phone }
+              - { name: whatsapp, label: 'WhatsApp number (with country code)', widget: string, required: false }
+              - { name: email, label: Email, widget: string, required: false }
+          - name: address
+            label: Address
+            widget: object
+            fields:
+              - { name: placeholder, label: 'This address is a placeholder (hide from Google)', widget: boolean, default: false }
+              - { name: street, label: Street, widget: string }
+              - { name: city, label: City, widget: string }
+              - { name: region, label: Region, widget: string, required: false }
+              - { name: postalCode, label: 'Postal code', widget: string, required: false }
+              - { name: country, label: Country, widget: string }
+              - { name: countryCode, label: 'Country code (2 letters)', widget: string, pattern: ['^[A-Z]{2}$', 'Two capital letters, e.g. LB'] }
+              - { name: mapUrl, label: 'Google Maps link', widget: string, required: false }
+          - name: seo
+            label: Search and sharing
+            widget: object
+            collapsed: true
+            fields:
+              - { name: titleTemplate, label: 'Title template (%s is the page title)', widget: string }
+              - { name: defaultDescription, label: 'Default description', widget: text }
+              - { name: ogImage, label: 'Social sharing image (1200×630)', widget: image, choose_url: false }
+              - { name: ogImageAlt, label: 'Sharing image description', widget: string }
+              - { name: locale, label: Locale, widget: string, default: en_US }
+          - name: business
+            label: Business type
+            widget: object
+            collapsed: true
+            fields:
+              - { name: schemaType, label: 'Business type', widget: select, options: [CafeOrCoffeeShop, Bakery, Restaurant, IceCreamShop] }
+              - { name: servesCuisine, label: 'Cuisine', widget: list, field: { name: cuisine, label: Cuisine, widget: string } }
+              - { name: priceRange, label: 'Price range ($ to $$$$)', widget: string }
+      - name: hours
+        label: Opening hours
+        file: src/data/hours.json
+        fields:
+          - { name: placeholder, label: 'These hours are placeholders (hide from Google)', widget: boolean, default: false }
+          - { name: note, label: 'Note under the hours', widget: string, required: false }
+          - name: days
+            label: Days
+            label_singular: Day
+            widget: list
+            summary: '{{fields.day}}: {{fields.opens}}–{{fields.closes}}'
+            fields:
+              - { name: day, label: Day, widget: select, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
+              - { name: closed, label: 'Closed all day', widget: boolean, default: false }
+              - { name: opens, label: 'Opens (24h, e.g. 07:00)', widget: string, required: false, pattern: ['^([01][0-9]|2[0-3]):[0-5][0-9]$', 'Use 24-hour time like 07:00'] }
+              - { name: closes, label: 'Closes (24h, e.g. 23:00)', widget: string, required: false, pattern: ['^([01][0-9]|2[0-3]):[0-5][0-9]$', 'Use 24-hour time like 23:00'] }
+          - name: closures
+            label: 'Special closures (holidays)'
+            label_singular: Closure
+            widget: list
+            required: false
+            summary: '{{fields.date}}: {{fields.label}}'
+            fields:
+              - { name: date, label: Date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false }
+              - { name: label, label: Reason, widget: string }
+      - name: navigation
+        label: Navigation
+        file: src/data/navigation.json
+        fields:
+          - name: items
+            label: Links
+            label_singular: Link
+            widget: list
+            summary: '{{fields.label}} → {{fields.href}}'
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: 'Link (e.g. /menu/)', widget: string }
+      - name: social
+        label: Social links
+        file: src/data/social-links.json
+        fields:
+          - name: links
+            label: Links
+            label_singular: Link
+            widget: list
+            summary: '{{fields.label}}'
+            fields:
+              - { name: platform, label: Platform, widget: select, options: [instagram, facebook, tiktok, whatsapp, x, youtube, google] }
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: 'Full URL (https://...)', widget: string, required: false }
+              - { name: enabled, label: 'Show on site', widget: boolean, default: true }
+      - name: contact_form
+        label: Contact form
+        file: src/data/contact-form.json
+        fields:
+          - { name: enabled, label: 'Send messages through a form service', widget: boolean, default: false, hint: 'Off: the form opens the visitor''s email app instead.' }
+          - { name: provider, label: Provider, widget: select, options: [formspree, custom] }
+          - { name: endpoint, label: 'Form endpoint URL (from your provider)', widget: string, required: false }
+          - { name: successMessage, label: 'Message after sending', widget: text }
+          - { name: disabledMessage, label: 'Notice shown while the service is off', widget: text }

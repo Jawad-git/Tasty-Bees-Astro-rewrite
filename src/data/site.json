@@ -1,0 +1,34 @@
+{
+  "name": "TastyBees",
+  "tagline": "Specialty coffee, fresh juices and handmade sweets.",
+  "logo": "/images/site/logo.svg",
+  "logoAlt": "TastyBees bee logo",
+  "contact": {
+    "phone": "1558",
+    "phoneLabel": "Delivery hotline",
+    "whatsapp": "+961 76 906205",
+    "email": "info@tastybees.com"
+  },
+  "address": {
+    "placeholder": true,
+    "street": "[Placeholder] Street address",
+    "city": "[Placeholder] City",
+    "region": "",
+    "postalCode": "",
+    "country": "Lebanon",
+    "countryCode": "LB",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=TastyBees+Lebanon"
+  },
+  "seo": {
+    "titleTemplate": "%s | TastyBees",
+    "defaultDescription": "TastyBees serves specialty coffee, fresh juices, crêpes, pancakes, ice cream and celebration cakes. See the full menu with prices.",
+    "ogImage": "/images/site/og-image.jpg",
+    "ogImageAlt": "Cappuccino, latte and espresso from TastyBees",
+    "locale": "en_US"
+  },
+  "business": {
+    "schemaType": "CafeOrCoffeeShop",
+    "servesCuisine": ["Coffee", "Juices", "Desserts", "Breakfast"],
+    "priceRange": "$$"
+  }
+}

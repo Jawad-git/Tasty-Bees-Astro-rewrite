@@ -1,0 +1,103 @@
+---
+import { hours } from '../lib/data';
+import { formatDate, formatDay, upcomingClosures } from '../lib/format';
+
+interface Props {
+  headingLevel?: 'h2' | 'h3';
+}
+const { headingLevel: Heading = 'h3' } = Astro.props;
+const closures = upcomingClosures(hours);
+---
+
+<div class="hours card">
+  <Heading class="hours__title">Opening hours</Heading>
+  {hours.placeholder && <p class="placeholder-note">Sample hours, to be confirmed</p>}
+  <table>
+    <caption class="visually-hidden">Opening hours by day</caption>
+    <tbody>
+      {
+        hours.days.map((day) => (
+          <tr class:list={{ closed: day.closed }}>
+            <th scope="row">{day.day}</th>
+            <td>{formatDay(day)}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  {hours.note && <p class="hours__note">{hours.note}</p>}
+  {
+    closures.length > 0 && (
+      <div class="hours__closures">
+        <p class="hours__closures-title">Upcoming closures</p>
+        <ul>
+          {closures.map((c) => (
+            <li>
+              <time datetime={c.date}>{formatDate(c.date)}</time>: {c.label}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .hours {
+    padding: var(--space-5);
+  }
+
+  .hours__title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-2);
+  }
+
+  th,
+  td {
+    padding: var(--space-2) 0;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: var(--text-sm);
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  tr.closed td {
+    color: var(--color-brand);
+    font-weight: 600;
+  }
+
+  .hours__note {
+    margin: var(--space-4) 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .hours__closures {
+    margin-top: var(--space-4);
+    font-size: var(--text-sm);
+  }
+
+  .hours__closures-title {
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+  }
+
+  .hours__closures ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+</style>

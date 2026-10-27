@@ -1,0 +1,193 @@
+---
+import Price from './Price.astro';
+import type { MenuItem } from '../lib/data';
+import { url } from '../lib/url';
+
+interface Props {
+  item: MenuItem;
+  /** Load the image eagerly (for the first items visible on screen). */
+  eager?: boolean;
+  headingLevel?: 'h3' | 'h4';
+}
+
+const { item, eager = false, headingLevel: Heading = 'h3' } = Astro.props;
+---
+
+<article class:list={['menu-item', 'card', { 'menu-item--unavailable': !item.available }]} id={`item-${item.id}`}>
+  <div class="menu-item__media">
+    {
+      item.image ? (
+        <img
+          src={url(item.image)}
+          alt={item.name}
+          width="480"
+          height="480"
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      ) : (
+        <div class="menu-item__placeholder" aria-hidden="true">
+          <span>{item.name.charAt(0)}</span>
+        </div>
+      )
+    }
+    {!item.available && <span class="badge badge--warning menu-item__status">Currently unavailable</span>}
+  </div>
+  <div class="menu-item__body">
+    <div class="menu-item__title">
+      <Heading class="menu-item__name">{item.name}</Heading>
+      {item.secondaryName && <span class="menu-item__secondary" lang="ar" dir="rtl">{item.secondaryName}</span>}
+    </div>
+    {item.description && <p class="menu-item__description">{item.description}</p>}
+    {
+      (item.note || item.featured || item.dietary.length > 0) && (
+        <ul class="menu-item__tags" aria-label="Item details">
+          {item.featured && <li class="badge">Popular</li>}
+          {item.dietary.map((d) => <li class="badge badge--muted">{d}</li>)}
+          {item.note && <li class="badge badge--muted">{item.note}</li>}
+        </ul>
+      )
+    }
+    {item.allergens.length > 0 && <p class="menu-item__allergens">Contains: {item.allergens.join(', ')}</p>}
+    <div class="menu-item__footer">
+      {item.available ? <Price prices={item.prices} /> : <span class="muted">Not available today</span>}
+    </div>
+  </div>
+</article>
+
+<style>
+  .menu-item {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: var(--space-4);
+    padding: var(--space-3);
+    transition:
+      transform var(--transition),
+      box-shadow var(--transition);
+  }
+
+  @media (hover: hover) {
+    .menu-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .menu-item {
+      grid-template-columns: 1fr;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  .menu-item__media {
+    position: relative;
+  }
+
+  .menu-item__media img,
+  .menu-item__placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    background: #fff;
+  }
+
+  @media (min-width: 40rem) {
+    .menu-item__media img,
+    .menu-item__placeholder {
+      aspect-ratio: 4 / 3;
+      border-radius: 0;
+    }
+  }
+
+  .menu-item__placeholder {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--color-accent-soft), var(--color-surface-warm));
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-accent-strong);
+  }
+
+  .menu-item__status {
+    position: absolute;
+    left: var(--space-2);
+    bottom: var(--space-2);
+  }
+
+  @media (max-width: 39.99rem) {
+    .menu-item__status {
+      position: static;
+      margin-top: var(--space-2);
+      white-space: normal;
+    }
+  }
+
+  .menu-item__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    min-width: 0;
+  }
+
+  @media (min-width: 40rem) {
+    .menu-item__body {
+      padding: var(--space-4) var(--space-4) var(--space-5);
+      flex: 1;
+    }
+  }
+
+  .menu-item__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .menu-item__name {
+    font-size: var(--text-lg);
+    margin: 0;
+  }
+
+  .menu-item__secondary {
+    align-self: flex-start;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .menu-item__description {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .menu-item__tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .menu-item__allergens {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .menu-item__footer {
+    margin-top: auto;
+    padding-top: var(--space-1);
+  }
+
+  .menu-item--unavailable img {
+    filter: grayscale(1);
+    opacity: 0.55;
+  }
+
+  .menu-item--unavailable .menu-item__name {
+    color: var(--color-text-muted);
+  }
+</style>

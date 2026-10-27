@@ -1,0 +1,82 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Reads the Pages URL (project subpath or custom domain) when Pages is enabled.
+      - name: Read GitHub Pages settings
+        id: pages
+        uses: actions/configure-pages@v6
+        continue-on-error: true
+
+      - name: Work out site URL and base path
+        env:
+          VAR_SITE_URL: ${{ vars.SITE_URL }}
+          VAR_BASE_PATH: ${{ vars.BASE_PATH }}
+          PAGES_OUTCOME: ${{ steps.pages.outcome }}
+          PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          if [ -n "$VAR_SITE_URL" ]; then
+            site="$VAR_SITE_URL"; base="$VAR_BASE_PATH"
+          elif [ "$PAGES_OUTCOME" = "success" ]; then
+            site="$PAGES_ORIGIN"; base="$PAGES_BASE_PATH"
+          else
+            site="https://${OWNER,,}.github.io"; base="/$REPO"
+            echo "::warning::GitHub Pages is not enabled for this repository yet. Building for $site$base. Enable it under Settings > Pages > Source: GitHub Actions."
+          fi
+          echo "SITE_URL=$site" >> "$GITHUB_ENV"
+          echo "BASE_PATH=$base" >> "$GITHUB_ENV"
+          echo "Building for ${site}${base}/"
+
+      - name: Validate content and type-check
+        run: npm run check
+
+      - name: Build site
+        run: npx astro build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

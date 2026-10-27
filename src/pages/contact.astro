@@ -1,0 +1,50 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import OpeningHours from '../components/OpeningHours.astro';
+import ContactSection from '../components/ContactSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { businessSchema } from '../lib/schema';
+
+const page = await getEntry('pages', 'contact');
+if (!page) throw new Error('Missing src/content/pages/contact.md');
+const { Content } = await render(page);
+const { data } = page;
+---
+
+<BaseLayout title={data.title} description={data.description} structuredData={[businessSchema(Astro.site)]}>
+  <PageHeader eyebrow="Contact" heading={data.heading} intro={data.intro} />
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-main">
+        <div class="prose"><Content /></div>
+        <ContactForm />
+      </div>
+      <aside class="contact-aside" aria-label="Contact details and opening hours">
+        <ContactSection headingLevel="h2" />
+        <OpeningHours headingLevel="h2" />
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  @media (min-width: 56rem) {
+    .contact-grid {
+      grid-template-columns: 1.25fr 1fr;
+    }
+  }
+
+  .contact-main,
+  .contact-aside {
+    display: grid;
+    gap: var(--space-5);
+  }
+</style>

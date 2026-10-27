@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "provider": "formspree",
+  "endpoint": "",
+  "successMessage": "Thanks! Your message has been sent. We usually reply within one working day.",
+  "disabledMessage": "Online messages are not switched on yet. Sending this form will open your email app with your message filled in."
+}

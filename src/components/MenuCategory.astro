@@ -1,0 +1,53 @@
+---
+import MenuItem from './MenuItem.astro';
+import type { MenuCategory } from '../lib/data';
+
+interface Props {
+  category: MenuCategory;
+  /** Number of leading item images to load eagerly. */
+  eagerCount?: number;
+}
+
+const { category, eagerCount = 0 } = Astro.props;
+---
+
+<section class="menu-category" id={category.id} aria-labelledby={`${category.id}-heading`}>
+  <header class="menu-category__header">
+    <h2 id={`${category.id}-heading`}>{category.name}</h2>
+    {category.description && <p class="muted">{category.description}</p>}
+  </header>
+  <div class="menu-category__grid">
+    {category.items.map((item, index) => <MenuItem item={item} eager={index < eagerCount} />)}
+  </div>
+</section>
+
+<style>
+  .menu-category {
+    padding-block: var(--space-7) 0;
+  }
+
+  .menu-category__header {
+    max-width: 44rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .menu-category__header h2 {
+    margin-bottom: var(--space-2);
+  }
+
+  .menu-category__header p {
+    margin: 0;
+  }
+
+  .menu-category__grid {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  @media (min-width: 40rem) {
+    .menu-category__grid {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: var(--space-5);
+    }
+  }
+</style>

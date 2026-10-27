@@ -1,0 +1,8 @@
+{
+  "links": [
+    { "platform": "whatsapp", "label": "WhatsApp", "url": "https://wa.me/96176906205", "enabled": true },
+    { "platform": "instagram", "label": "Instagram", "url": "", "enabled": false },
+    { "platform": "facebook", "label": "Facebook", "url": "", "enabled": false },
+    { "platform": "tiktok", "label": "TikTok", "url": "", "enabled": false }
+  ]
+}

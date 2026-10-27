@@ -1,0 +1,3839 @@
+{
+  "currency": {
+    "code": "USD",
+    "locale": "en-US"
+  },
+  "categories": [
+    {
+      "id": "coffee",
+      "name": "Specialty Coffee",
+      "description": "Iced lattes, frappuccinos and signature coffees.",
+      "available": true,
+      "items": [
+        {
+          "id": "pistachio-iced-coffee",
+          "name": "Pistachio Iced Coffee",
+          "secondaryName": "قهوة مثلجة بالفستق الحلبي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/pistachio-iced-coffee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lotus-iced-coffee",
+          "name": "Lotus Iced Coffee",
+          "secondaryName": "لوتس آيس كوفي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/lotus-iced-coffee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "nutella-iced-coffee",
+          "name": "Nutella Iced Coffee",
+          "secondaryName": "نيوتلا آيس كوفي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/nutella-iced-coffee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "oreo-iced-coffee",
+          "name": "Oreo Iced Coffee",
+          "secondaryName": "أوريو آيس كوفي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/oreo-iced-coffee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "alfredo-white-cappuccino",
+          "name": "Alfredo White Cappuccino",
+          "secondaryName": "كابتشينو ألفريدو الأبيض",
+          "description": "Cappuccino shaken with milk and white mocha and cold foam.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/alfredo-white-cappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-iced-cappuccino",
+          "name": "Strawberry Iced Cappuccino",
+          "secondaryName": "كابتشينو الفراولة المثلج",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/strawberry-iced-cappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "spanish-latte",
+          "name": "Spanish Latte",
+          "secondaryName": "سبانيش لاتيه",
+          "description": "Double shot of Espresso blended with milk and a touch of sweetness. Served cold or hot.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/spanish-latte.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-white-mocha",
+          "name": "Ice White Mocha",
+          "secondaryName": "ايس وايت موكا",
+          "description": "Espresso combined with white chocolate and milk, served over ice.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/ice-white-mocha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "coconut-iced-coffee",
+          "name": "Coconut Iced Coffee",
+          "secondaryName": "كوكونات ايس كوفي",
+          "description": "Coconut purée blended with a double shot of espresso, cream, and milk, served chilled.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/coconut-iced-coffee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "caramel-frappuccino",
+          "name": "Caramel Frappuccino",
+          "secondaryName": "كرامل فرابوشينو",
+          "description": "Blended iced coffee with milk and Caramel syrup.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/caramel-frappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mocha-frappuccino",
+          "name": "Mocha Frappuccino",
+          "secondaryName": "موكا فرابوتشينو",
+          "description": "Blended iced coffee with milk and Chocolate syrup.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/mocha-frappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "vanilla-frappuccino",
+          "name": "Vanilla Frappuccino",
+          "secondaryName": "فرابتشينو بالفانيليا",
+          "description": "Blended iced coffee with milk and Vanilla syrup.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/vanilla-frappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-cappuccino",
+          "name": "Ice Cappuccino",
+          "secondaryName": "آيس كابوتشينو",
+          "description": "Vanilla ice cream mixed with espresso & milk served with caramel syrup & fresh cream",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/ice-cappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-coffee.webp"
+    },
+    {
+      "id": "matcha",
+      "name": "Matcha",
+      "description": "Hot and iced matcha drinks.",
+      "available": true,
+      "items": [
+        {
+          "id": "hot-matcha-classic",
+          "name": "Hot Matcha Classic",
+          "secondaryName": "ماتشا ساخن",
+          "description": "Matcha blended with milk and hot water.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/hot-matcha-classic.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-matcha",
+          "name": "Ice Matcha",
+          "secondaryName": "ايس ماتشا",
+          "description": "Matcha blended with milk, served with ice.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/ice-matcha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mango-matcha",
+          "name": "Mango Matcha",
+          "secondaryName": "مانغو ماتشا",
+          "description": "Crushed fresh mango layered with milk, topped with matcha.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/mango-matcha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mixed-berries-matcha",
+          "name": "Mixed Berries Matcha",
+          "secondaryName": "مكس بيريز ماتشا",
+          "description": "Crushed fresh strawberries, raspberries, and blueberries layered with milk, topped with matcha.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/mixed-berries-matcha.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-matcha",
+          "name": "Strawberry Matcha",
+          "secondaryName": "ماتشا الفراولة",
+          "description": "Strawberry puree layered with milk, topped with matcha.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.5
+            }
+          ],
+          "image": "/images/menu/strawberry-matcha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "vanilla-matcha",
+          "name": "Vanilla Matcha",
+          "secondaryName": "ماتشا الفانيليا",
+          "description": "Iced Matcha blended with milk and vanilla syrup",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.5
+            }
+          ],
+          "image": "/images/menu/vanilla-matcha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "caramel-matcha",
+          "name": "Caramel Matcha",
+          "secondaryName": "ماتشا الكراميل",
+          "description": "Iced Matcha blended with milk and caramel syrup",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.5
+            }
+          ],
+          "image": "/images/menu/caramel-matcha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-coffee.webp"
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso Bar",
+      "description": "Classic hot espresso drinks.",
+      "available": true,
+      "items": [
+        {
+          "id": "espresso",
+          "name": "Espresso",
+          "secondaryName": "اسبريسو",
+          "description": "",
+          "prices": [
+            {
+              "label": "Single",
+              "amount": 2.0
+            },
+            {
+              "label": "Double",
+              "amount": 3.5
+            }
+          ],
+          "image": "/images/menu/espresso.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "americano",
+          "name": "Americano",
+          "secondaryName": "اميركانو",
+          "description": "Served cold or hot.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/americano.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "caffe-latte",
+          "name": "Caffe Latte",
+          "secondaryName": "كافيه لاتيه",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.5
+            }
+          ],
+          "image": "/images/menu/caffe-latte.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cappuccino",
+          "name": "Cappuccino",
+          "secondaryName": "كابوتشينو",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/cappuccino.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mocha",
+          "name": "Mocha",
+          "secondaryName": "موكا",
+          "description": "Espresso mixed with milk and chocolate, served iced or hot.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/mocha.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "caramel-macchiato",
+          "name": "Caramel Macchiato",
+          "secondaryName": "كراميل ماكياتو",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/caramel-macchiato.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-espresso.webp"
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "description": "Served 7:00 AM to 2:00 PM. Breakfast bundle: one main item plus one drink for $10. Pancakes, waffles or crêpes individually: $8.",
+      "available": true,
+      "items": [
+        {
+          "id": "golden-rolls",
+          "name": "Golden Rolls",
+          "description": "A rolled up crepe filled with cream cheese set on honey and topped with honey apricot, paired with another rolled up crepe with blueberry syrup at the base and blueberry on top. Served with mangos, strawberries and blueberries.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/golden-rolls.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "western-islands",
+          "name": "Western Islands",
+          "description": "Three pancakes filled with Belgian chocolate, topped with Belgian and white chocolate. Three filled with pistachio paste, topped with pistachio syrup. Served with fresh mango, strawberries and blueberries.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/western-islands.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "two-islands",
+          "name": "Two Islands",
+          "description": "Three pancakes filled with cream cheese, topped with honey apricot. Three filled with cream cheese, topped with blueberry coulis. Served with fresh mango, strawberries and blueberries.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/two-islands.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tasty-rolls",
+          "name": "Tasty Rolls",
+          "description": "A rolled up crepe filled with pastry cream set on pistachio syrup, topped with honey and pistachio crumbs, paired with another rolled up crepe drizzled in Belgian and white chocolate, finished with a sprinkle of crushed hazelnut . Served with whipped cream on the side.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/tasty-rolls.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ]
+    },
+    {
+      "id": "crepes",
+      "name": "Crêpes",
+      "description": "Thin crêpes folded around chocolate, fruit and crunch.",
+      "available": true,
+      "items": [
+        {
+          "id": "double-chocolate",
+          "name": "Double Chocolate",
+          "secondaryName": "كريب شوكولا",
+          "description": "Nutella, Bananas, Topped With Chocolate",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/double-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kinder-crepe",
+          "name": "Kinder Crepe",
+          "secondaryName": "كيندر كريب",
+          "description": "Nutella, Nestle, Kinder Bars, Bananas, Strawberries & Milky Chocolate",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/kinder-crepe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "crunchy-crepe",
+          "name": "Crunchy Crepe",
+          "secondaryName": "كرانشي كريب",
+          "description": "Richard Crunchy Chocolate, Bananas & Feuilltene",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.5
+            }
+          ],
+          "image": "/images/menu/crunchy-crepe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-fruit",
+          "name": "Choco Fruit",
+          "secondaryName": "فواكه بالشوكولا",
+          "description": "Nutella, pineapples, strawberries, bananas and mangos, topped with milky chocolate",
+          "prices": [
+            {
+              "label": "",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/choco-fruit.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "brownie-crepe",
+          "name": "Brownie Crepe",
+          "secondaryName": "براوني كريب",
+          "description": "Sliced Brownies, Californian Wallnut, Dark Chocolate, Served With Vanilla Ice Cream",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/brownie-crepe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "biscuit-oreo",
+          "name": "Biscuit Oreo",
+          "secondaryName": "اوريو كريب",
+          "description": "Nutella, sliced brownies, californian walnut, dark chocolate, served with vanilla icecream",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/biscuit-oreo.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lotus-chocolate",
+          "name": "Lotus Chocolate",
+          "secondaryName": "لوتس كريب",
+          "description": "Speculoos spread crunchy, bananas, topped with milky chocolate and speculoos biscuits",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/lotus-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-pistachio",
+          "name": "Choco Pistachio",
+          "secondaryName": "شوكو بيستاشيو",
+          "description": "A crepe filled with rich pistachio paste and roasted pistachio bits, topped with smooth Belgian chocolate and pistachio syrup. Served with a scoop of vanilla ice cream.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/choco-pistachio.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fettuccine-crepe",
+          "name": "Fettuccine Crepe",
+          "secondaryName": "كريب فيتوتشيني",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/fettuccine-crepe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-crepes.webp"
+    },
+    {
+      "id": "pancakes",
+      "name": "Pancakes",
+      "description": "Fluffy pancakes with generous fillings.",
+      "available": true,
+      "items": [
+        {
+          "id": "chocolate-pancake",
+          "name": "Chocolate Pancake",
+          "secondaryName": "بانكيك شوكولا",
+          "description": "Hazel Butter, & Nutella.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/chocolate-pancake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ferrero-rocher",
+          "name": "Ferrero Rocher",
+          "secondaryName": "فيريرو روشيه",
+          "description": "Hazel Butter, Richard Crunchy Chocolate, Chocorock & Feuilltene.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/ferrero-rocher.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "marshmallow-pancake",
+          "name": "Marshmallow Pancake",
+          "secondaryName": "مارشميلو بانكيك",
+          "description": "Hazelnut Butter, Nutella And Marshmallows, Topped with Milky Chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.5
+            }
+          ],
+          "image": "/images/menu/marshmallow-pancake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kinder-pancake",
+          "name": "Kinder Pancake",
+          "secondaryName": "كيندر بانكيك",
+          "description": "Hazel Butter, Nutella, Nestle, Kinder Bars, Topped With Chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/kinder-pancake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "honey-bees",
+          "name": "Honey Bees",
+          "secondaryName": "بانكيك هاني بيز",
+          "description": "Hazelnut butter, panna cotta cream, topped with honey apricot glaze.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/honey-bees.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pancake-roll",
+          "name": "Pancake Roll",
+          "secondaryName": "بانكيك رول",
+          "description": "5 Pieces of Pancake Served Cold With Syrupe And Pishtachios",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/pancake-roll.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mini-eclair",
+          "name": "Mini Eclair",
+          "secondaryName": "ميني اكلير",
+          "description": "12 Pieces Of Éclair Dipped In Chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/mini-eclair.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "canadian-pancake",
+          "name": "Canadian Pancake",
+          "secondaryName": "كناديان بانكيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.5
+            }
+          ],
+          "image": "/images/menu/canadian-pancake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pancake-roll-2",
+          "name": "Pancake Roll",
+          "secondaryName": "بانكيك رول",
+          "description": "A Dozen of Pancake Served Cold With Syrupe",
+          "prices": [
+            {
+              "label": "Dozen",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/pancake-roll-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        }
+      ],
+      "image": "/images/menu/category-pancakes.webp"
+    },
+    {
+      "id": "waffles",
+      "name": "Waffles",
+      "description": "Golden waffles with sweet toppings.",
+      "available": true,
+      "items": [
+        {
+          "id": "honey-waffle",
+          "name": "Honey Waffle",
+          "secondaryName": "وافل بالعسل",
+          "description": "Topped With Achta, Honey & Nuts.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/honey-waffle.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "almond-crumble",
+          "name": "Almond Crumble",
+          "secondaryName": "الموند وافل",
+          "description": "Milky chocolate, biscuit crumble and toasted almonds, served with vanilla icecream\"",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.5
+            }
+          ],
+          "image": "/images/menu/almond-crumble.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "triple-chocolate",
+          "name": "Triple Chocolate",
+          "secondaryName": "وافل بالشوكولا",
+          "description": "3 Kinds Of Chocolate (Milk, Dark & White).",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/triple-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tasty-fruit",
+          "name": "Tasty Fruit",
+          "secondaryName": "وافل فواكه",
+          "description": "Pineapples, Strawberries, Bananas, Mangos, Topped With Milky Chocolate, Served With Toasted Almonds.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/tasty-fruit.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cinnamon-apple",
+          "name": "Cinnamon Apple",
+          "secondaryName": "وافل بالتفاح والقرفة",
+          "description": "Mixed of apple cinnamon caramel topped with vanilla icecream, walnuts and crumble.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/cinnamon-apple.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-waffles.webp"
+    },
+    {
+      "id": "ice-cream",
+      "name": "Ice Cream",
+      "description": "Scoops, sundaes and glacées.",
+      "available": true,
+      "items": [
+        {
+          "id": "ice-cream-2-scoops",
+          "name": "Ice Cream ( 2 scoops)",
+          "secondaryName": "كاسة بوظة",
+          "description": "Your choice of ice cream topped with freshcream, syrup.",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-2-scoops.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-cream-3-scoops",
+          "name": "Ice Cream (3 scoops)",
+          "secondaryName": "كاسة بوظة",
+          "description": "Your choice of ice cream topped with freshcream, syrup",
+          "prices": [
+            {
+              "label": "Large",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-3-scoops.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-cream-tasty",
+          "name": "Ice Cream Tasty",
+          "secondaryName": "بوظة تايستي",
+          "description": "Fruit salad topped with 3 scoops of ice cream garnished",
+          "prices": [
+            {
+              "label": "",
+              "amount": 12.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-tasty.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "banana-split",
+          "name": "Banana Split",
+          "secondaryName": "بانانا سبليت",
+          "description": "A covered plate of achta & bananas with 3 scoops of ice cream (fruit flavored) topped with fresh cream garnished with fruits",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/banana-split.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "banana-boat",
+          "name": "Banana Boat",
+          "secondaryName": "بانانا بوت",
+          "description": "A covered plate of achta & banana with 3 scoops of ice cream (milk/chocolate flavored) topped with fresh cream, hazel nuts & chocolate chips",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/banana-boat.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "chocolate-mou",
+          "name": "Chocolate Mou",
+          "secondaryName": "شوكولا مو",
+          "description": "Chocolate ice cream topped with hazel nuts,fresh cream and chocolate syrup",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 8.0
+            },
+            {
+              "label": "Large",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/chocolate-mou.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-cream-1-2-kg",
+          "name": "Ice Cream (1/2 KG)",
+          "secondaryName": "نصف كيلو بوظة",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-1-2-kg.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "pistachio-marble-glacee",
+          "name": "Pistachio Marble Glacée",
+          "secondaryName": "غلاسيه الفستق الحلبي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/pistachio-marble-glacee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "oreo-marble-glacee",
+          "name": "Oreo Marble Glacée",
+          "secondaryName": "غلاسيه الأوريو",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/oreo-marble-glacee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "vanilla-marble-glacee",
+          "name": "Vanilla Marble Glacée",
+          "secondaryName": "غلاسيه الفانيل",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/vanilla-marble-glacee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "chocolate-marble-glacee",
+          "name": "Chocolate Marble Glacée",
+          "secondaryName": "غلاسيه الشوكولا",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/chocolate-marble-glacee.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "berry-ice-cream-cake",
+          "name": "Berry Ice Cream Cake",
+          "secondaryName": "كيكة آيس كريم التوت",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/berry-ice-cream-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-berry-ice-cream-cake",
+          "name": "Choco-Berry Ice Cream Cake",
+          "secondaryName": "كيكة آيس كريم الشوكولا والتوت",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/choco-berry-ice-cream-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "affogato-mixed-chocolate",
+          "name": "Affogato Mixed Chocolate",
+          "secondaryName": "أفوجاتو الشوكولا المشكلة",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/affogato-mixed-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ice-cream-1-kg",
+          "name": "Ice Cream ( 1 KG )",
+          "secondaryName": "كيلو آيس كريم",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 22.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-1-kg.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "marble-glace-box",
+          "name": "Marble Glacé Box",
+          "secondaryName": "علبة ماربل غلاسيه (4 قطع)",
+          "description": "Marble Glacé Box ( 4 Pieces ): Customize your box of 4 Marble Glacé with you favorite flavors. ( Oreo, Pistachio, Vanilla, Chocolate Marble Glacé ).",
+          "prices": [
+            {
+              "label": "",
+              "amount": 18.0
+            }
+          ],
+          "image": "/images/menu/marble-glace-box.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "ice-cream-cake-box",
+          "name": "Ice Cream Cake Box",
+          "secondaryName": "علبة كيك الآيس كريم",
+          "description": "Ice Cream Cake Box ( 4 Pieces ): Customize your box of 4 Ice Cream Cakes with you favorite flavors. ( Berry Ice Cream Cake / Choco Berry Ice Cream Cake ).",
+          "prices": [
+            {
+              "label": "",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/ice-cream-cake-box.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        }
+      ],
+      "image": "/images/menu/category-ice-cream.webp"
+    },
+    {
+      "id": "cakes",
+      "name": "Cakes by the Slice",
+      "description": "Individual cakes and slices.",
+      "available": true,
+      "items": [
+        {
+          "id": "chocolate-cake",
+          "name": "Chocolate Cake",
+          "secondaryName": "شوكليت كيك",
+          "description": "Served with caramel ice cream.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/chocolate-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "crumble-caramel-cake",
+          "name": "Crumble Caramel Cake",
+          "secondaryName": "كرامبل كراميل كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/crumble-caramel-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "blueberry-cheesecake",
+          "name": "Blueberry Cheesecake",
+          "secondaryName": "تشيز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/blueberry-cheesecake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cortina-cake",
+          "name": "Cortina Cake",
+          "secondaryName": "كورتينا كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/cortina-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "crunchy-dome-cake",
+          "name": "Crunchy Dome Cake",
+          "secondaryName": "كرنشي دوم كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/crunchy-dome-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "redvelvet-cake",
+          "name": "Redvelvet Cake",
+          "secondaryName": "ريدفالفيت كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/redvelvet-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "babaroom",
+          "name": "Babaroom",
+          "secondaryName": "باباروم",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.0
+            }
+          ],
+          "image": "/images/menu/babaroom.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "brownie-cake",
+          "name": "Brownie Cake",
+          "secondaryName": "براوني كيك",
+          "description": "Served hot with vanilla ice cream chocolate syrup.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/brownie-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kitkat-cake",
+          "name": "KitKat cake",
+          "secondaryName": "كيت كات كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/kitkat-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "foret-noire",
+          "name": "Forêt Noire",
+          "secondaryName": "فوري نوار كيك",
+          "description": "Forêt Noire Cake",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.5
+            }
+          ],
+          "image": "/images/menu/foret-noire.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lotus-cheesecake",
+          "name": "Lotus CheeseCake",
+          "secondaryName": "لوتس تشيز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/lotus-cheesecake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fraisier-cake",
+          "name": "Fraisier Cake",
+          "secondaryName": "فريزيه كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 4.5
+            }
+          ],
+          "image": "/images/menu/fraisier-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "oreo-cheesecake",
+          "name": "Oreo CheeseCake",
+          "secondaryName": "تشيز كيك الأوريو",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/oreo-cheesecake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-cakes.webp"
+    },
+    {
+      "id": "whole-cakes",
+      "name": "Whole Cakes",
+      "description": "Celebration cakes in medium and large sizes.",
+      "available": true,
+      "items": [
+        {
+          "id": "foret-noire-cake",
+          "name": "Forêt Noire Cake",
+          "secondaryName": "فوري نوار كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 33.0
+            },
+            {
+              "label": "Large",
+              "amount": 38.0
+            }
+          ],
+          "image": "/images/menu/foret-noire-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "foret-blanche-cake",
+          "name": "Forêt Blanche Cake",
+          "secondaryName": "فوري بلانش كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 33.0
+            },
+            {
+              "label": "Large",
+              "amount": 38.0
+            }
+          ],
+          "image": "/images/menu/foret-blanche-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "wildberries-cake",
+          "name": "Wildberries cake",
+          "secondaryName": "وايلد بيريز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 27.0
+            }
+          ],
+          "image": "/images/menu/wildberries-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "manguier-cake",
+          "name": "Manguier Cake",
+          "secondaryName": "مانغييه كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 32.0
+            }
+          ],
+          "image": "/images/menu/manguier-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fraisier-cake-2",
+          "name": "Fraisier Cake",
+          "secondaryName": "فريزيه كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 32.0
+            }
+          ],
+          "image": "/images/menu/fraisier-cake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-caramel-cake",
+          "name": "Choco Caramel Cake",
+          "secondaryName": "شوكو كراميل كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 23.0
+            }
+          ],
+          "image": "/images/menu/choco-caramel-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-mango-cake",
+          "name": "Choco Mango Cake",
+          "secondaryName": "شوكو مانغو كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 23.0
+            }
+          ],
+          "image": "/images/menu/choco-mango-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-fraise-cake",
+          "name": "Choco Fraise Cake",
+          "secondaryName": "شوكو فريز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 23.0
+            }
+          ],
+          "image": "/images/menu/choco-fraise-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-pistachio-cake",
+          "name": "Choco Pistachio Cake",
+          "secondaryName": "شوكو بيستاشيو كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 23.0
+            }
+          ],
+          "image": "/images/menu/choco-pistachio-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mars-cake",
+          "name": "Mars Cake",
+          "secondaryName": "مارس كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 20.0
+            }
+          ],
+          "image": "/images/menu/mars-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "maltesers-cake",
+          "name": "Maltesers Cake",
+          "secondaryName": "مالتيزرز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 20.0
+            }
+          ],
+          "image": "/images/menu/maltesers-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kitkat-cake-2",
+          "name": "KitKat Cake",
+          "secondaryName": "كيت كات كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 25.0
+            },
+            {
+              "label": "",
+              "amount": 36.0
+            }
+          ],
+          "image": "/images/menu/kitkat-cake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kinder-cake",
+          "name": "Kinder Cake",
+          "secondaryName": "كندر كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 28.0
+            }
+          ],
+          "image": "/images/menu/kinder-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "snickers-cake",
+          "name": "Snickers Cake",
+          "secondaryName": "سنيكرز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 20.0
+            }
+          ],
+          "image": "/images/menu/snickers-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "chocolate-cake-2",
+          "name": "Chocolate Cake",
+          "secondaryName": "شوكليت كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 30.0
+            }
+          ],
+          "image": "/images/menu/chocolate-cake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "crumble-cake",
+          "name": "Crumble Cake",
+          "secondaryName": "كرامبل كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 28.0
+            }
+          ],
+          "image": "/images/menu/crumble-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cheesecake",
+          "name": "CheeseCake",
+          "secondaryName": "تشيز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 35.0
+            }
+          ],
+          "image": "/images/menu/cheesecake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lotus-cheesecake-2",
+          "name": "Lotus CheeseCake",
+          "secondaryName": "لوتس تشيز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 35.0
+            }
+          ],
+          "image": "/images/menu/lotus-cheesecake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "nutella-cake",
+          "name": "Nutella Cake",
+          "secondaryName": "نوتيلا كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 25.0
+            }
+          ],
+          "image": "/images/menu/nutella-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cortina-cake-2",
+          "name": "Cortina Cake",
+          "secondaryName": "كورتينا كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 20.0
+            },
+            {
+              "label": "",
+              "amount": 33.0
+            }
+          ],
+          "image": "/images/menu/cortina-cake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "hershey-s-cake",
+          "name": "Hershey's Cake",
+          "secondaryName": "هارشيز كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 30.0
+            }
+          ],
+          "image": "/images/menu/hershey-s-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "redvelvet-cake-2",
+          "name": "RedVelvet Cake",
+          "secondaryName": "ريدفالفيت كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 28.0
+            }
+          ],
+          "image": "/images/menu/redvelvet-cake-2.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "twix-cake",
+          "name": "Twix Cake",
+          "secondaryName": "تويكس كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 20.0
+            }
+          ],
+          "image": "/images/menu/twix-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "bubbly-cake",
+          "name": "Bubbly Cake",
+          "secondaryName": "بابلي كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 32.0
+            }
+          ],
+          "image": "/images/menu/bubbly-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-tart",
+          "name": "Strawberry Tart",
+          "secondaryName": "تارت فريز",
+          "description": "Strawberry Tarte Cake",
+          "prices": [
+            {
+              "label": "",
+              "amount": 21.0
+            }
+          ],
+          "image": "/images/menu/strawberry-tart.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fruit-tart",
+          "name": "Fruit Tart",
+          "secondaryName": "فروت تارت",
+          "description": "Fruit Tart Cake",
+          "prices": [
+            {
+              "label": "",
+              "amount": 21.0
+            }
+          ],
+          "image": "/images/menu/fruit-tart.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "coffee-vanille-cake",
+          "name": "Coffee Vanille Cake",
+          "secondaryName": "كيك القهوة والفانيليا",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 19.0
+            },
+            {
+              "label": "",
+              "amount": 28.0
+            }
+          ],
+          "image": "/images/menu/coffee-vanille-cake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mini-fraisier",
+          "name": "Mini Fraisier",
+          "secondaryName": "كيك الفريزييه",
+          "description": "Mini Fraisier Cake",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 23.0
+            }
+          ],
+          "image": "/images/menu/mini-fraisier.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mini-foret-noir",
+          "name": "Mini Forêt Noir",
+          "secondaryName": "كيك الفواكه",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 26.0
+            }
+          ],
+          "image": "/images/menu/mini-foret-noir.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "mini-foret-blanc",
+          "name": "Mini Forêt Blanc",
+          "secondaryName": "كيك الفواكه",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 26.0
+            }
+          ],
+          "image": "/images/menu/mini-foret-blanc.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-whole-cakes.webp"
+    },
+    {
+      "id": "english-cakes",
+      "name": "English Cakes",
+      "description": "Classic loaf cakes.",
+      "available": true,
+      "items": [
+        {
+          "id": "raspberry-chocolate",
+          "name": "Raspberry Chocolate",
+          "secondaryName": "رازبيري شوكليت",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 13.0
+            }
+          ],
+          "image": "/images/menu/raspberry-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "marbled",
+          "name": "Marbled",
+          "secondaryName": "ماربل كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 13.0
+            }
+          ],
+          "image": "/images/menu/marbled.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "apple-cinnamon",
+          "name": "Apple Cinnamon",
+          "secondaryName": "سينامن أبل",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 13.0
+            }
+          ],
+          "image": "/images/menu/apple-cinnamon.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-whole-cakes.webp"
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "description": "Puddings and traditional sweets.",
+      "available": true,
+      "items": [
+        {
+          "id": "biscuit-fondant",
+          "name": "Biscuit Fondant",
+          "secondaryName": "فوندان بيسكيت",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/biscuit-fondant.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "eclair-stick",
+          "name": "Éclair Stick",
+          "secondaryName": "اكلير",
+          "description": "7 Pieces Of Éclair Dipped In Chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/eclair-stick.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-banana-stick",
+          "name": "Strawberry & Banana Stick",
+          "secondaryName": "فراولة وموز مع الشوكولا",
+          "description": "5 Pieces Of Strawberries & Bananas Dipped In Chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/strawberry-banana-stick.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "choco-crunch-small",
+          "name": "Choco Crunch Small",
+          "secondaryName": "شوكو كرانش",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/choco-crunch-small.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tiramisu-small",
+          "name": "Tiramisu Small",
+          "secondaryName": "تيراميسو",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/tiramisu-small.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pistacielo",
+          "name": "Pistacielo",
+          "secondaryName": "بيستاشيلو",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/pistacielo.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-cheesecake-small",
+          "name": "Strawberry Cheesecake Small",
+          "secondaryName": "تشيزكيك فريز",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/strawberry-cheesecake-small.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "chocolate-mousecake",
+          "name": "Chocolate Mousecake",
+          "secondaryName": "شوكوليت موس كيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "Small",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/chocolate-mousecake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "rice-pudding",
+          "name": "Rice Pudding",
+          "secondaryName": "رز بحليب",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 2.5
+            }
+          ],
+          "image": "/images/menu/rice-pudding.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "custard-pudding",
+          "name": "Custard Pudding",
+          "secondaryName": "كاستارذ",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 2.5
+            }
+          ],
+          "image": "/images/menu/custard-pudding.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cream-caramel",
+          "name": "Cream Caramel",
+          "secondaryName": "كريم كاراميل",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/cream-caramel.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "moghly",
+          "name": "Moghly",
+          "secondaryName": "مغلي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 2.5
+            }
+          ],
+          "image": "/images/menu/moghly.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "jello",
+          "name": "Jello",
+          "secondaryName": "جلو",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 2.0
+            }
+          ],
+          "image": "/images/menu/jello.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-desserts.webp"
+    },
+    {
+      "id": "soiree-trays",
+      "name": "Soirée Trays",
+      "description": "Trays of mini sweets for gatherings.",
+      "available": true,
+      "items": [
+        {
+          "id": "tarte-tray",
+          "name": "Tarte Tray",
+          "secondaryName": "صينية قطع تارت",
+          "description": "12 Pieces mini tartes tray ( dates, mango, pistachio, strawberries )",
+          "prices": [
+            {
+              "label": "",
+              "amount": 16.0
+            }
+          ],
+          "image": "/images/menu/tarte-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "choco-tray",
+          "name": "Choco Tray",
+          "secondaryName": "قطع ميني كيك شوكولاتة",
+          "description": "12 Pieces mini Chocolate cakes ( Nutella, Kinder and Cortina )",
+          "prices": [
+            {
+              "label": "",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/choco-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "cheesecake-tray",
+          "name": "Cheesecake Tray",
+          "secondaryName": "قطع تشيزكيك",
+          "description": "12 Pieces mini cheesecakes tray ( Strawberry, Lotus, Oreo )",
+          "prices": [
+            {
+              "label": "",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/cheesecake-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "choco-sponge-tray",
+          "name": "Choco Sponge Tray",
+          "secondaryName": "قطع كيك الشوكولاتة",
+          "description": "12 Pieces mini cakes ( Foret Noir, Red Velvet and Oreo )",
+          "prices": [
+            {
+              "label": "",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/choco-sponge-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "choco-mouse-tray",
+          "name": "Choco Mouse Tray",
+          "secondaryName": "قطع موس الشوكولاتة",
+          "description": "12 Pieces mini Choco Mouse Tray ( Pistachio Mouse, Strawberry Mouse, Choco Mouse )",
+          "prices": [
+            {
+              "label": "",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/choco-mouse-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        },
+        {
+          "id": "crumble-cookies",
+          "name": "Crumble Cookies",
+          "secondaryName": "كوكيز كرامبل",
+          "description": "12 Pieces Of Cookie Crumble dipped in belgium chocolate.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/crumble-cookies.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        }
+      ],
+      "image": "/images/menu/category-soiree-trays.webp"
+    },
+    {
+      "id": "juices",
+      "name": "Fresh Juices",
+      "description": "Squeezed to order, in medium, large or bottle sizes.",
+      "available": true,
+      "items": [
+        {
+          "id": "orange-juice",
+          "name": "Orange Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/orange-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "apple-juice",
+          "name": "Apple Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/apple-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "carrot-juice",
+          "name": "Carrot Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/carrot-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "grape-juice",
+          "name": "Grape Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/grape-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lemonade",
+          "name": "Lemonade",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/lemonade.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "grapefruit",
+          "name": "Grapefruit",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/grapefruit.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "minted-lemonade",
+          "name": "Minted Lemonade",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.5
+            },
+            {
+              "label": "Large",
+              "amount": 5.5
+            },
+            {
+              "label": "Bottle",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/minted-lemonade.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-juice",
+          "name": "Strawberry Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/strawberry-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fresh-mango",
+          "name": "Fresh Mango",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/fresh-mango.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "jallab",
+          "name": "Jallab",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/jallab.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pomegranate",
+          "name": "Pomegranate",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/pomegranate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "melon-juice",
+          "name": "Melon Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/melon-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "watermelon-juice",
+          "name": "Watermelon Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/watermelon-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pineapple-juice",
+          "name": "Pineapple Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 7.0
+            },
+            {
+              "label": "Large",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/pineapple-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "kiwi-juice",
+          "name": "Kiwi Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 7.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 15.0
+            }
+          ],
+          "image": "/images/menu/kiwi-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "californian-summer",
+          "name": "Californian Summer",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/californian-summer.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "guava-juice",
+          "name": "Guava Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 5.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/guava-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pomegranate-with-orange",
+          "name": "Pomegranate With Orange",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/pomegranate-with-orange.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-juices.webp"
+    },
+    {
+      "id": "cocktails",
+      "name": "Fruit Cocktails",
+      "description": "Layered fruit cocktails, avocado blends and milk shakes the Lebanese way.",
+      "available": true,
+      "items": [
+        {
+          "id": "cocktail-juice",
+          "name": "Cocktail Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/cocktail-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "super-juice",
+          "name": "Super Juice",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 16.0
+            }
+          ],
+          "image": "/images/menu/super-juice.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fruit-cocktail",
+          "name": "Fruit Cocktail",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 7.0
+            },
+            {
+              "label": "Large",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/fruit-cocktail.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "special-fruit-cocktail",
+          "name": "Special Fruit Cocktail",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 8.0
+            },
+            {
+              "label": "Large",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/special-fruit-cocktail.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "special-exotic",
+          "name": "Special Exotic",
+          "description": "",
+          "prices": [
+            {
+              "label": "Large",
+              "amount": 14.0
+            }
+          ],
+          "image": "/images/menu/special-exotic.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tahiti",
+          "name": "Tahiti",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/tahiti.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "avocado",
+          "name": "Avocado",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 18.0
+            }
+          ],
+          "image": "/images/menu/avocado.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "avocado-special",
+          "name": "Avocado Special",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 8.0
+            },
+            {
+              "label": "Large",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/avocado-special.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "avocado-royal",
+          "name": "Avocado Royal",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 9.0
+            },
+            {
+              "label": "Large",
+              "amount": 11.0
+            }
+          ],
+          "image": "/images/menu/avocado-royal.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "3-layers",
+          "name": "3 Layers",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 16.0
+            }
+          ],
+          "image": "/images/menu/3-layers.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "so-tasty",
+          "name": "So Tasty",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/so-tasty.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "banana-milk",
+          "name": "Banana & Milk",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/banana-milk.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-milk",
+          "name": "Strawberry & Milk",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/strawberry-milk.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-banana-milk",
+          "name": "Strawberry, Banana, Milk",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            },
+            {
+              "label": "Bottle",
+              "amount": 10.0
+            }
+          ],
+          "image": "/images/menu/strawberry-banana-milk.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "berries-n-bees",
+          "name": "Berries' n Bees",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 9.0
+            },
+            {
+              "label": "Large",
+              "amount": 13.0
+            }
+          ],
+          "image": "/images/menu/berries-n-bees.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-cocktails.webp"
+    },
+    {
+      "id": "shakes",
+      "name": "Shakes",
+      "description": "Thick, creamy shakes.",
+      "available": true,
+      "items": [
+        {
+          "id": "chocolate-milkshake",
+          "name": "Chocolate Milkshake",
+          "secondaryName": "شوكولا ميلك شيك",
+          "description": "Chocolate ice cream mixed with milk topped with fresh cream and chocolate syrup",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 7.0
+            },
+            {
+              "label": "Large",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/chocolate-milkshake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "avocado-milkshake",
+          "name": "Avocado Milkshake",
+          "secondaryName": "أفوكادو ميلك شيك",
+          "description": "Avocado mixed with milk served with cream & honey",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 7.0
+            },
+            {
+              "label": "Large",
+              "amount": 9.0
+            }
+          ],
+          "image": "/images/menu/avocado-milkshake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "oreo-milkshake",
+          "name": "Oreo Milkshake",
+          "secondaryName": "أوريو ميلك شيك",
+          "description": "Oreo ice cream mixed with milk topped with fresh cream and chocolate syrup",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/oreo-milkshake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "red-velvet-milkshake",
+          "name": "Red Velvet Milkshake",
+          "secondaryName": "ريد فلفيت ميلك شيك",
+          "description": "Vanilla ice cream mixed with milk topped with fresh cream and strawberry syrup",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/red-velvet-milkshake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lotus-caramel-drizzle",
+          "name": "Lotus Caramel Drizzle",
+          "secondaryName": "لوتس ميلك شيك",
+          "description": "Vanilla ice cream blended with speculoos syrup and milk topped with whipped cream and lotus crumbs",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/lotus-caramel-drizzle.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "blueberry-swirl",
+          "name": "Blueberry Swirl",
+          "secondaryName": "بلوبيري ميلك شيك",
+          "description": "Vanilla ice cream blended with fresh bluberries and milk, topped with whipped cream.",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/blueberry-swirl.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cool-mint",
+          "name": "Cool Mint",
+          "secondaryName": "ليمون ونعنع ميلك شيك",
+          "description": "Lemon ice cream blended with mint and milk topped with whipped cream.",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/cool-mint.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "ashta-milkshake",
+          "name": "Ashta Milkshake",
+          "secondaryName": "قشطة ميلك شيك",
+          "description": "Ashta ice cream blended with milk topped with whipped cream.",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/ashta-milkshake.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "melon-mix",
+          "name": "Melon Mix",
+          "secondaryName": "شمام ميلك شيك",
+          "description": "Melon ice cream blended with fresh melon and milk, topped with whipped cream.",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 6.0
+            },
+            {
+              "label": "Large",
+              "amount": 8.0
+            }
+          ],
+          "image": "/images/menu/melon-mix.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "pistachio-choco-break",
+          "name": "Pistachio Choco Break",
+          "secondaryName": "شوكو بريك بيستاشيو",
+          "description": "A smooth mix of vanilla ice cream and pistachio, served in a cup lined with swirled Belgian chocolate and topped with whipped cream.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/pistachio-choco-break.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-choco-break",
+          "name": "Strawberry Choco Break",
+          "secondaryName": "شوكوبريك- فريز",
+          "description": "A rich blend of vanilla ice cream, fresh strawberries, and strawberry coulis, served in a cup lined with swirled Belgian white chocolate and topped with whipped cream.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/strawberry-choco-break.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ],
+      "image": "/images/menu/category-shakes.webp"
+    },
+    {
+      "id": "fruit-platters",
+      "name": "Fruit Platters",
+      "description": "Seasonal fruit, beautifully cut.",
+      "available": true,
+      "items": [
+        {
+          "id": "fruit-platter",
+          "name": "Fruit Platter",
+          "secondaryName": "صحون فواكه",
+          "description": "Fruit Platter serves 1-2 people",
+          "prices": [
+            {
+              "label": "",
+              "amount": 12.0
+            }
+          ],
+          "image": "/images/menu/fruit-platter.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "exotic-fruit-platter",
+          "name": "Exotic Fruit Platter",
+          "secondaryName": "صحن فواكه استوائية",
+          "description": "Exotic Fruit Platter serves 2-3 people",
+          "prices": [
+            {
+              "label": "",
+              "amount": 18.0
+            }
+          ],
+          "image": "/images/menu/exotic-fruit-platter.webp",
+          "available": true,
+          "featured": true,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tasty-fruit-platter",
+          "name": "Tasty Fruit Platter",
+          "secondaryName": "صحن فواكه استوائية",
+          "description": "Tasty Fruit Platter serves 3-4 people",
+          "prices": [
+            {
+              "label": "",
+              "amount": 24.0
+            }
+          ],
+          "image": "/images/menu/tasty-fruit-platter.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "fruit-tray",
+          "name": "Fruit Tray",
+          "secondaryName": "صينية فواكه",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 28.0
+            }
+          ],
+          "image": "/images/menu/fruit-tray.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": [],
+          "note": "Takeaway only"
+        }
+      ],
+      "image": "/images/menu/category-fruit-platters.webp"
+    },
+    {
+      "id": "kids",
+      "name": "Kids Menu",
+      "description": "Tasty food for happy kids.",
+      "available": true,
+      "items": [
+        {
+          "id": "kinder-crepe-kids",
+          "name": "Kinder Crepe-Kids",
+          "secondaryName": "كيندر كريب",
+          "description": "Kids Kinder Crepe",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/kinder-crepe-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "marshmallow-pancake-kids",
+          "name": "Marshmallow Pancake-Kids",
+          "secondaryName": "مارشميلو بانكيك",
+          "description": "Marshmallow Pancake kids",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/marshmallow-pancake-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "nutella-pancake-kids",
+          "name": "Nutella Pancake-Kids",
+          "secondaryName": "نوتيلا بانكيك",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/nutella-pancake-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "orange-juice-kids",
+          "name": "Orange Juice-Kids",
+          "secondaryName": "عصير ليمون",
+          "description": "Orange Juice Kids",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/orange-juice-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "apple-juice-kids",
+          "name": "Apple Juice-Kids",
+          "secondaryName": "عصير تفاح",
+          "description": "Apple Juice",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/apple-juice-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "carrot-juice-kids",
+          "name": "Carrot Juice-Kids",
+          "secondaryName": "عصير جزر",
+          "description": "Carrot Juice",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/carrot-juice-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "strawberry-juice-kids",
+          "name": "Strawberry Juice-Kids",
+          "secondaryName": "عصير فريز",
+          "description": "Strawberry Juice",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/strawberry-juice-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "cocktail-juice-kids",
+          "name": "Cocktail Juice-Kids",
+          "secondaryName": "عصير كوكتيل",
+          "description": "Cocktail Juice",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/cocktail-juice-kids.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages & Shisha",
+      "description": "Tea, soft drinks, water and shisha.",
+      "available": true,
+      "items": [
+        {
+          "id": "coffe",
+          "name": "Coffe",
+          "secondaryName": "قهوة عربية",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 4.0
+            },
+            {
+              "label": "Large",
+              "amount": 6.0
+            }
+          ],
+          "image": "/images/menu/coffe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "tea",
+          "name": "Tea",
+          "secondaryName": "إبريق شاي",
+          "description": "",
+          "prices": [
+            {
+              "label": "Medium",
+              "amount": 5.0
+            },
+            {
+              "label": "Large",
+              "amount": 7.0
+            }
+          ],
+          "image": "/images/menu/tea.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "lipton-tea",
+          "name": "Lipton Tea",
+          "secondaryName": "شاي ليبتون",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/lipton-tea.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "zhurat",
+          "name": "Zhurat",
+          "secondaryName": "زهورات",
+          "description": "Zhurat Herbal tea",
+          "prices": [
+            {
+              "label": "",
+              "amount": 2.0
+            }
+          ],
+          "image": "/images/menu/zhurat.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "perrier",
+          "name": "Perrier",
+          "secondaryName": "بيرييه",
+          "description": "Perrier sparkling water",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.5
+            }
+          ],
+          "image": "/images/menu/perrier.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "secondaryName": "مياه",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 1.5
+            }
+          ],
+          "image": "/images/menu/water.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "shisha",
+          "name": "Shisha",
+          "secondaryName": "نرجيلة معسل",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 10.0
+            }
+          ],
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "shisha-tobacco",
+          "name": "Shisha tobacco",
+          "secondaryName": "نرجيلة عجمي",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 12.0
+            }
+          ],
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "hot-chocolate",
+          "name": "Hot Chocolate",
+          "secondaryName": "هوت تشوكليت",
+          "description": "Dark Belgian Chocolate mixed with condensed milk and fresh cream.",
+          "prices": [
+            {
+              "label": "",
+              "amount": 5.0
+            }
+          ],
+          "image": "/images/menu/hot-chocolate.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        },
+        {
+          "id": "nescafe",
+          "name": "Nescafe",
+          "secondaryName": "نيسكافيه",
+          "description": "",
+          "prices": [
+            {
+              "label": "",
+              "amount": 3.0
+            }
+          ],
+          "image": "/images/menu/nescafe.webp",
+          "available": true,
+          "featured": false,
+          "dietary": [],
+          "allergens": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "placeholder": true,
+  "note": "Breakfast is served from 7:00 AM until 2:00 PM.",
+  "days": [
+    { "day": "Monday", "closed": false, "opens": "07:00", "closes": "23:00" },
+    { "day": "Tuesday", "closed": false, "opens": "07:00", "closes": "23:00" },
+    { "day": "Wednesday", "closed": false, "opens": "07:00", "closes": "23:00" },
+    { "day": "Thursday", "closed": false, "opens": "07:00", "closes": "23:00" },
+    { "day": "Friday", "closed": false, "opens": "07:00", "closes": "00:00" },
+    { "day": "Saturday", "closed": false, "opens": "07:00", "closes": "00:00" },
+    { "day": "Sunday", "closed": false, "opens": "08:00", "closes": "23:00" }
+  ],
+  "closures": [
+    { "date": "2026-12-25", "label": "Christmas Day" }
+  ]
+}

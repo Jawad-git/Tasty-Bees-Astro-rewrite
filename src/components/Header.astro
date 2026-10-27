@@ -1,0 +1,204 @@
+---
+import { navigation, site } from '../lib/data';
+import { url } from '../lib/url';
+
+const current = Astro.url.pathname.replace(/\/?$/, '/');
+const isCurrent = (href: string) => url(href).replace(/\/?$/, '/') === current;
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href={url('/')}>
+      <img src={url(site.logo)} alt="" width="40" height="40" />
+      <span class="brand__name">{site.name}</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        {
+          navigation.items.map((item) => (
+            <li>
+              <a href={url(item.href)} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+  if (toggle && nav) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.dataset['open'] = String(open);
+    };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  }
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(251 247 240 / 0.92);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: var(--border);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-height);
+    gap: var(--space-4);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .brand__name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-1);
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: background-color var(--transition);
+  }
+
+  .site-nav a:hover {
+    background: var(--color-surface-warm);
+  }
+
+  .site-nav a[aria-current='page'] {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  @media (max-width: 47.99rem) {
+    /* Without JavaScript the links stay visible; with it they collapse behind the toggle. */
+    :global(.js) .nav-toggle {
+      display: inline-grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: var(--border);
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      cursor: pointer;
+    }
+
+    .nav-toggle__bars,
+    .nav-toggle__bars::before,
+    .nav-toggle__bars::after {
+      display: block;
+      width: 1.125rem;
+      height: 2px;
+      background: var(--color-text);
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    .nav-toggle__bars {
+      position: relative;
+    }
+
+    .nav-toggle__bars::before,
+    .nav-toggle__bars::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    .nav-toggle__bars::before {
+      top: -6px;
+    }
+    .nav-toggle__bars::after {
+      top: 6px;
+    }
+
+    .nav-toggle[aria-expanded='true'] .nav-toggle__bars {
+      background: transparent;
+    }
+    .nav-toggle[aria-expanded='true'] .nav-toggle__bars::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav-toggle[aria-expanded='true'] .nav-toggle__bars::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    :global(.no-js) .site-header__inner {
+      flex-wrap: wrap;
+      padding-block: var(--space-2);
+    }
+
+    :global(.no-js) .site-nav {
+      width: 100%;
+    }
+
+    :global(.js) .site-nav {
+      position: absolute;
+      inset: var(--header-height) 0 auto;
+      background: var(--color-bg);
+      border-bottom: var(--border);
+      box-shadow: var(--shadow-md);
+      display: none;
+    }
+
+    :global(.js) .site-nav[data-open='true'] {
+      display: block;
+    }
+
+    :global(.js) .site-nav ul {
+      flex-direction: column;
+      padding: var(--space-3) var(--space-5) var(--space-5);
+    }
+
+    :global(.js) .site-nav a {
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-base);
+    }
+  }
+</style>

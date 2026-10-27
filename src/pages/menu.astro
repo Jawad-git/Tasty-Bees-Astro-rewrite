@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import MenuCategory from '../components/MenuCategory.astro';
+import { menu, visibleCategories } from '../lib/data';
+import { menuSchema } from '../lib/schema';
+
+const itemCount = visibleCategories.reduce((n, c) => n + c.items.length, 0);
+---
+
+<BaseLayout
+  title="Menu"
+  description={`Our full menu of ${itemCount} items: specialty coffee, juices, crêpes, pancakes, ice cream, cakes and more, with prices in ${menu.currency.code}.`}
+  structuredData={[menuSchema(Astro.site)]}
+>
+  <PageHeader eyebrow="Menu" heading="Our menu" intro="Fresh juices, specialty coffee and handmade sweets. Please ask our team about ingredients and allergens." />
+
+  <nav class="category-nav" aria-label="Menu categories">
+    <div class="container">
+      <ul>
+        {visibleCategories.map((cat) => <li><a href={`#${cat.id}`}>{cat.name}</a></li>)}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container menu-body">
+    {visibleCategories.map((category, index) => <MenuCategory category={category} eagerCount={index === 0 ? 4 : 0} />)}
+  </div>
+</BaseLayout>
+
+<style>
+  .category-nav {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 40;
+    background: rgb(251 247 240 / 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: var(--border);
+  }
+
+  .category-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-3) 0;
+    display: flex;
+    gap: var(--space-2);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    overscroll-behavior-x: contain;
+  }
+
+  .category-nav a {
+    display: block;
+    white-space: nowrap;
+    padding: var(--space-2) var(--space-4);
+    border: var(--border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition), color var(--transition);
+  }
+
+  .category-nav a:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  .menu-body {
+    padding-bottom: var(--space-8);
+  }
+
+  .menu-body :global(.menu-category) {
+    scroll-margin-top: calc(var(--header-height) + 4.5rem);
+  }
+</style>

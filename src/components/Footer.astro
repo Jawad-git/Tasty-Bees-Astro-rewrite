@@ -1,0 +1,133 @@
+---
+import SocialIcon from './SocialIcon.astro';
+import { navigation, site, socialLinks } from '../lib/data';
+import { url } from '../lib/url';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="site-footer__brand" href={url('/')}>
+        <img src={url(site.logo)} alt="" width="36" height="36" loading="lazy" />
+        <span>{site.name}</span>
+      </a>
+      <p class="site-footer__tagline">{site.tagline}</p>
+    </div>
+
+    <nav aria-label="Footer">
+      <h2 class="site-footer__heading">Explore</h2>
+      <ul>
+        {navigation.items.map((item) => <li><a href={url(item.href)}>{item.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="site-footer__heading">Get in touch</h2>
+      <ul>
+        {site.contact.phone && <li><a href={`tel:${site.contact.phone.replace(/[^\d+]/g, '')}`}>{site.contact.phoneLabel}: {site.contact.phone}</a></li>}
+        {site.contact.email && <li><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>}
+      </ul>
+      {
+        socialLinks.length > 0 && (
+          <ul class="social" aria-label="Social media">
+            {socialLinks.map((link) => (
+              <li>
+                <a href={link.url} rel="noopener" target="_blank">
+                  <SocialIcon platform={link.platform} />
+                  <span>{link.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© {year} {site.name}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-text);
+    color: #eadfcf;
+    padding-top: var(--space-7);
+    margin-top: auto;
+  }
+
+  .site-footer a {
+    color: #fff6e8;
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .site-footer__grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  .site-footer__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 700;
+  }
+
+  .site-footer__tagline {
+    margin-top: var(--space-3);
+    max-width: 22rem;
+  }
+
+  .site-footer__heading {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f6c445;
+    margin-bottom: var(--space-3);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .social {
+    margin-top: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid rgb(255 255 255 / 0.25);
+    border-radius: var(--radius-pill);
+  }
+
+  .site-footer__bottom {
+    border-top: 1px solid rgb(255 255 255 / 0.15);
+    margin-top: var(--space-7);
+    padding-block: var(--space-5);
+    font-size: var(--text-sm);
+  }
+
+  .site-footer__bottom p {
+    margin: 0;
+  }
+</style>

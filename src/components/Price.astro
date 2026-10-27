@@ -1,0 +1,48 @@
+---
+import { formatPrice } from '../lib/format';
+import type { MenuItem } from '../lib/data';
+
+interface Props {
+  prices: MenuItem['prices'];
+}
+const { prices } = Astro.props;
+---
+
+<ul class="prices">
+  {
+    prices.map((p) => (
+      <li>
+        {p.label && <span class="prices__label">{p.label}</span>}
+        <span class="prices__amount">{formatPrice(p.amount)}</span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .prices {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+  }
+
+  .prices li {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+  }
+
+  .prices__label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .prices__amount {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+  }
+</style>

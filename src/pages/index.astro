@@ -1,0 +1,116 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import MenuItem from '../components/MenuItem.astro';
+import OpeningHours from '../components/OpeningHours.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { featuredItems } from '../lib/data';
+import { businessSchema } from '../lib/schema';
+import { url } from '../lib/url';
+
+const page = await getEntry('pages', 'home');
+if (!page) throw new Error('Missing src/content/pages/home.md');
+const { Content } = await render(page);
+const { data } = page;
+---
+
+<BaseLayout description={data.description} structuredData={[businessSchema(Astro.site)]}>
+  <Hero
+    heading={data.heading}
+    intro={data.intro}
+    image={data.heroImage}
+    imageAlt={data.heroImageAlt}
+    primaryCta={data.primaryCta}
+    secondaryCta={data.secondaryCta}
+  />
+
+  {
+    featuredItems.length > 0 && (
+      <section class="section" aria-labelledby="featured-heading">
+        <div class="container">
+          <div class="section-header featured-header">
+            <div>
+              <span class="eyebrow">Guest favourites</span>
+              <h2 id="featured-heading">Popular right now</h2>
+            </div>
+            <a class="btn btn--secondary" href={url('/menu/')}>Full menu</a>
+          </div>
+          <div class="featured-grid">
+            {featuredItems.slice(0, 6).map((item) => <MenuItem item={item} />)}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section section--warm" aria-label="About TastyBees">
+    <div class="container intro">
+      <div class="prose">
+        <Content />
+        <p><a href={url('/about/')}>Read our story →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="visit-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Visit</span>
+        <h2 id="visit-heading">Hours and location</h2>
+      </div>
+      <div class="visit-grid">
+        <OpeningHours />
+        <ContactSection />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .featured-header {
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .featured-header h2 {
+    margin: 0;
+  }
+
+  .featured-grid {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  @media (min-width: 40rem) {
+    .featured-grid {
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      gap: var(--space-5);
+    }
+  }
+
+  .intro .prose {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .intro :global(h2) {
+    margin-top: 0;
+  }
+
+  .visit-grid {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 48rem) {
+    .visit-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+</style>

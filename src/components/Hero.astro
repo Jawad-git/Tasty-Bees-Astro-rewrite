@@ -1,0 +1,105 @@
+---
+import { url } from '../lib/url';
+
+interface Props {
+  heading: string;
+  intro?: string | undefined;
+  image?: string | undefined;
+  imageAlt?: string | undefined;
+  primaryCta?: { label: string; href: string } | undefined;
+  secondaryCta?: { label: string; href: string } | undefined;
+}
+
+const { heading, intro, image, imageAlt = '', primaryCta, secondaryCta } = Astro.props;
+// Pre-built 640px variant (same name with "-640") is used on small screens when present.
+const small = image?.replace(/(\.\w+)$/, '-640$1');
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1>{heading}</h1>
+      {intro && <p class="hero__intro">{intro}</p>}
+      <div class="hero__actions">
+        {primaryCta && <a class="btn btn--primary" href={url(primaryCta.href)}>{primaryCta.label}</a>}
+        {secondaryCta && <a class="btn btn--secondary" href={url(secondaryCta.href)}>{secondaryCta.label}</a>}
+      </div>
+      <slot />
+    </div>
+    {
+      image && (
+        <div class="hero__media">
+          <img
+            src={url(image)}
+            srcset={image.startsWith('/images/site/') && small ? `${url(small)} 640w, ${url(image)} 1200w` : undefined}
+            sizes="(min-width: 56rem) 34rem, 92vw"
+            alt={imageAlt}
+            width="1200"
+            height="1200"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: var(--space-7) var(--space-8);
+    background:
+      radial-gradient(60rem 30rem at 85% 10%, var(--color-accent-soft), transparent 70%),
+      var(--color-bg);
+  }
+
+  .hero__inner {
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  @media (min-width: 56rem) {
+    .hero__inner {
+      grid-template-columns: 1.05fr 1fr;
+      gap: var(--space-7);
+    }
+  }
+
+  .hero__intro {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 34rem;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .hero__media {
+    position: relative;
+  }
+
+  .hero__media img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    background: #fff;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero__media::before {
+    content: '';
+    position: absolute;
+    inset: auto -0.75rem -0.75rem auto;
+    width: 45%;
+    height: 45%;
+    border-radius: var(--radius-lg);
+    background: #f6c445;
+    z-index: -1;
+  }
+</style>

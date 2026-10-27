@@ -1,0 +1,186 @@
+---
+import { contactForm, site } from '../lib/data';
+
+// Submission settings live in src/data/contact-form.json (editable in the CMS).
+// When disabled, the form falls back to opening the visitor's email app, so it
+// never pretends a message was delivered.
+const live = contactForm.enabled && contactForm.endpoint !== '';
+---
+
+<form
+  class="contact-form card"
+  method="post"
+  action={live ? contactForm.endpoint : `mailto:${site.contact.email}`}
+  data-live={String(live)}
+  data-email={site.contact.email}
+  data-success={contactForm.successMessage}
+  novalidate
+>
+  <h2 class="contact-form__title">Send us a message</h2>
+  {!live && <p class="contact-form__notice" role="note">{contactForm.disabledMessage}</p>}
+
+  <div class="field">
+    <label for="cf-name">Name</label>
+    <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="cf-name-error" />
+    <p class="field__error" id="cf-name-error" aria-live="polite"></p>
+  </div>
+
+  <div class="field">
+    <label for="cf-email">Email</label>
+    <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="cf-email-error" />
+    <p class="field__error" id="cf-email-error" aria-live="polite"></p>
+  </div>
+
+  <div class="field">
+    <label for="cf-message">Message</label>
+    <textarea id="cf-message" name="message" rows="5" required minlength="10" maxlength="3000" aria-describedby="cf-message-error"></textarea>
+    <p class="field__error" id="cf-message-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Honeypot: hidden from people, often filled by bots. Formspree ignores submissions with _gotcha set. -->
+  <div class="hp" aria-hidden="true">
+    <label for="cf-gotcha">Leave this field empty</label>
+    <input id="cf-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <button class="btn btn--primary" type="submit">{live ? 'Send message' : 'Write email'}</button>
+  <p class="contact-form__status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('.contact-form');
+
+  const messages: Record<string, (el: HTMLInputElement | HTMLTextAreaElement) => string> = {
+    name: (el) => (el.validity.valueMissing ? 'Please enter your name.' : ''),
+    email: (el) =>
+      el.validity.valueMissing ? 'Please enter your email address.' : el.validity.typeMismatch ? 'Please enter a valid email address.' : '',
+    message: (el) =>
+      el.validity.valueMissing ? 'Please write a message.' : el.validity.tooShort ? 'Please write at least 10 characters.' : '',
+  };
+
+  function validate(field: HTMLInputElement | HTMLTextAreaElement): boolean {
+    const message = messages[field.name]?.(field) ?? '';
+    const error = document.getElementById(`${field.id}-error`);
+    if (error) error.textContent = message;
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+    return !message;
+  }
+
+  if (form) {
+    const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]'));
+    const status = form.querySelector<HTMLElement>('.contact-form__status');
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    fields.forEach((field) => field.addEventListener('blur', () => validate(field)));
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const valid = fields.map(validate).every(Boolean);
+      if (!valid) {
+        fields.find((f) => f.getAttribute('aria-invalid') === 'true')?.focus();
+        return;
+      }
+      const data = new FormData(form);
+      if (data.get('_gotcha')) return;
+
+      if (form.dataset['live'] !== 'true') {
+        const subject = encodeURIComponent(`Message from ${data.get('name')}`);
+        const body = encodeURIComponent(`${data.get('message')}\n\n${data.get('name')} <${data.get('email')}>`);
+        window.location.href = `mailto:${form.dataset['email']}?subject=${subject}&body=${body}`;
+        return;
+      }
+
+      if (button) button.disabled = true;
+      if (status) status.textContent = 'Sending…';
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error(String(response.status));
+        form.reset();
+        if (status) status.textContent = form.dataset['success'] ?? 'Thanks!';
+      } catch {
+        if (status) status.textContent = `Sorry, your message could not be sent. Please email ${form.dataset['email']} instead.`;
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .contact-form {
+    padding: var(--space-5);
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .contact-form__title {
+    font-size: var(--text-xl);
+    margin: 0;
+  }
+
+  .contact-form__notice {
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    background: var(--color-accent-soft);
+    font-size: var(--text-sm);
+  }
+
+  .field {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  label {
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+
+  input,
+  textarea {
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid #cbb89f;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-focus);
+  }
+
+  [aria-invalid='true'] {
+    border-color: var(--color-brand);
+  }
+
+  .field__error {
+    margin: 0;
+    min-height: 1.25em;
+    font-size: var(--text-xs);
+    color: var(--color-brand);
+  }
+
+  .hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .contact-form__status {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .contact-form__status:empty {
+    display: none;
+  }
+
+  button {
+    justify-self: start;
+  }
+</style>

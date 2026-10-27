@@ -1,0 +1,65 @@
+---
+import '@fontsource-variable/fraunces/wght.css';
+import '../styles/global.css';
+import frauncesLatin from '@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2?url';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../lib/data';
+import { absoluteUrl, url } from '../lib/url';
+
+interface Props {
+  /** Page title without the site name; omit for the site name alone. */
+  title?: string | undefined;
+  description?: string | undefined;
+  image?: string | undefined;
+  imageAlt?: string | undefined;
+  /** Extra Schema.org objects for this page. */
+  structuredData?: Record<string, unknown>[];
+}
+
+const { title, description = site.seo.defaultDescription, image = site.seo.ogImage, imageAlt = site.seo.ogImageAlt, structuredData = [] } =
+  Astro.props;
+
+const fullTitle = title ? site.seo.titleTemplate.replace('%s', title) : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = absoluteUrl(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <link rel="sitemap" href={url('/sitemap-index.xml')} />
+    <link rel="preload" href={frauncesLatin} as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#fbf7f0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:locale" content={site.seo.locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {structuredData.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+    <script is:inline>
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
