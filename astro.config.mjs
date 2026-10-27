@@ -14,7 +14,8 @@ export default defineConfig({
   site,
   base,
   trailingSlash: 'ignore',
-  build: { format: 'directory' },
+  // Inline the (small) stylesheet so first paint doesn't wait on a CSS request.
+  build: { format: 'directory', inlineStylesheets: 'always' },
   integrations: [sitemap()],
   markdown: {
     processor: satteri({ hastPlugins: [baseLinksPlugin(base)] }),

@@ -1,5 +1,4 @@
 ---
-import '@fontsource-variable/fraunces/wght.css';
 import '../styles/global.css';
 import frauncesLatin from '@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
@@ -36,6 +35,7 @@ const ogImage = absoluteUrl(image, Astro.site);
     <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
     <link rel="preload" href={frauncesLatin} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={`@font-face{font-family:'Fraunces Variable';font-style:normal;font-weight:100 900;font-display:optional;src:url(${frauncesLatin}) format('woff2-variations')}`}></style>
     <meta name="theme-color" content="#fbf7f0" />
     <meta name="generator" content={Astro.generator} />
 

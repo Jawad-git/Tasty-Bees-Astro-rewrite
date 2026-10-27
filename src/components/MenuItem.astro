@@ -2,6 +2,7 @@
 import Price from './Price.astro';
 import type { MenuItem } from '../lib/data';
 import { url } from '../lib/url';
+import { responsiveSrcset } from '../lib/images';
 
 interface Props {
   item: MenuItem;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const { item, eager = false, headingLevel: Heading = 'h3' } = Astro.props;
+const srcset = item.image ? responsiveSrcset(item.image) : undefined;
 ---
 
 <article class:list={['menu-item', 'card', { 'menu-item--unavailable': !item.available }]} id={`item-${item.id}`}>
@@ -19,6 +21,8 @@ const { item, eager = false, headingLevel: Heading = 'h3' } = Astro.props;
       item.image ? (
         <img
           src={url(item.image)}
+          srcset={srcset}
+          sizes={srcset ? '(min-width: 40rem) 18rem, 6.5rem' : undefined}
           alt={item.name}
           width="480"
           height="480"
