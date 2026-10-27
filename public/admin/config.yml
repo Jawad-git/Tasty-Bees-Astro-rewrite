@@ -32,7 +32,7 @@ local_backend: true
 media_folder: public/images/uploads
 public_folder: /images/uploads
 
-site_url: https://jawad-git.github.io/Tasty-Bees-Astro-rewrite/ # REPLACE with your live URL or custom domain
+site_url: https://mohammad-jawad-almoussawi.me/Tasty-Bees-Astro-rewrite/ # REPLACE if the live URL changes
 logo_url: ../images/site/logo.svg
 
 collections:
