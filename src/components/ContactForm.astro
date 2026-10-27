@@ -10,14 +10,20 @@ const live = contactForm.enabled && contactForm.endpoint !== '';
 <form
   class="contact-form card"
   method="post"
-  action={live ? contactForm.endpoint : `mailto:${site.contact.email}`}
+  action={live ? contactForm.endpoint : undefined}
   data-live={String(live)}
   data-email={site.contact.email}
   data-success={contactForm.successMessage}
   novalidate
 >
   <h2 class="contact-form__title">Send us a message</h2>
-  {!live && <p class="contact-form__notice" role="note">{contactForm.disabledMessage}</p>}
+  {
+    !live && (
+      <p class="contact-form__notice" role="note">
+        {contactForm.disabledMessage} You can also email us directly at <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+      </p>
+    )
+  }
 
   <div class="field">
     <label for="cf-name">Name</label>
