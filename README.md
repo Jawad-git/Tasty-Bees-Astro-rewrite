@@ -182,6 +182,12 @@ It uses GitHub's free hosted runners; nothing runs between deployments.
 Until step 1 is done, the build job still runs (and reports a warning) but the deploy job
 fails because Pages is not enabled.
 
+Note: `jawad-git.github.io` currently redirects to the custom domain
+`mohammad-jawad-almoussawi.me`, so project sites under this account are served at
+`http://mohammad-jawad-almoussawi.me/Tasty-Bees-Astro-rewrite/`. Once Pages is enabled the
+workflow reads that address from the Pages settings automatically. Update `site_url` in
+`public/admin/config.yml` to match (it only affects the CMS's "View Live" link).
+
 ### Deployment modes
 
 The site URL and base path come from environment variables read in `astro.config.mjs`:
