@@ -20,7 +20,16 @@ const { data } = page;
       {
         data.heroImage && (
           <figure class="about-media">
-            <img src={url(data.heroImage)} alt={data.heroImageAlt ?? ''} width="1000" height="1000" loading="lazy" decoding="async" />
+            <img
+              src={url(data.heroImage)}
+              srcset={data.heroImage.startsWith('/images/site/') ? `${url(data.heroImage.replace(/(\.\w+)$/, '-640$1'))} 640w, ${url(data.heroImage)} 1000w` : undefined}
+              sizes="(min-width: 56rem) 28rem, 92vw"
+              alt={data.heroImageAlt ?? ''}
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
         )
       }

@@ -318,7 +318,7 @@ inline validation and a honeypot field for spam. Its settings live in
 
 - Fully static HTML. The only JavaScript on public pages is the mobile menu toggle and the
   contact form validation (a few KB, no framework).
-- Menu photos were converted to WebP (720px, about 25 KB each). Every image has explicit
+- Menu photos are served as WebP in three sizes (about 6–25 KB each). Every image has explicit
   dimensions and a CSS aspect ratio, so nothing shifts while loading; images below the fold
   load lazily, and the hero image is prioritised with a 640px variant for phones.
 - One self-hosted variable font (Fraunces, headings only, Latin subset preloaded,
@@ -332,8 +332,11 @@ inline validation and a honeypot field for spam. Its settings live in
   `aria-current` navigation, keyboard and Escape support for the mobile menu, a no-JS
   fallback that keeps links visible. An axe-core scan of all four pages at desktop and
   phone widths reported no WCAG A/AA violations.
-- CMS uploads are not resized automatically. Upload photos around 1000px wide and under
-  300 KB (JPEG or WebP).
+- Menu photos and CMS uploads are resized automatically: `npm run images`
+  (`scripts/image-variants.mjs`, run before every dev server start and build) writes
+  240/480/720px WebP copies to `public/_img/` (not committed; cached between CI runs), and
+  menu cards pick the right size with `srcset`. Upload one photo of any size (JPEG, PNG or
+  WebP); there is no need to upload several versions.
 
 Lighthouse scores are an optimisation goal, not something this README guarantees.
 
