@@ -59,6 +59,17 @@ jobs:
       - name: Validate content and type-check
         run: npm run check
 
+      # Reuse resized images from earlier runs; only new or changed photos are processed.
+      - name: Restore resized images
+        uses: actions/cache@v5
+        with:
+          path: public/_img
+          key: img-${{ hashFiles('scripts/image-variants.mjs', 'public/images/menu/**', 'public/images/uploads/**') }}
+          restore-keys: img-
+
+      - name: Create resized images
+        run: npm run images
+
       - name: Build site
         run: npx astro build
 
